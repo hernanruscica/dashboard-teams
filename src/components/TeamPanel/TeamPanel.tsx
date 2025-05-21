@@ -1,6 +1,6 @@
 // src/components/TeamPanel/TeamPanel.tsx
 import React, { useState } from 'react';
-import type { Team, Member } from '@/shared/types/team';
+import type { Team, Member } from '@/types/team';
 import { teams } from '@/app/data/teams';
 import { MemberCard } from '@/components/TeamPanel/MemberCard';
 //import { PurchaseModal } from '@/components/Modal/PurchaseModal/PurchaseModal';
@@ -9,7 +9,7 @@ import clsx from 'clsx';
 
 interface TeamPanelProps {
   team: Team;
-  onSelectTeam: (team: Team) => void;
+  onSelectTeam: (teamId: string) => void;
   isSelected: boolean;
 }
 
@@ -37,7 +37,7 @@ export function TeamPanel({ team, onSelectTeam, isSelected }: TeamPanelProps) {
 
       <div className="mt-6 flex justify-end">
         <button
-          onClick={() => onSelectTeam(team)}
+          onClick={() => onSelectTeam(team.id)}
           className={clsx(
             "px-6 py-2 rounded-lg shadow transition",
             isSelected 
@@ -45,7 +45,7 @@ export function TeamPanel({ team, onSelectTeam, isSelected }: TeamPanelProps) {
               : "bg-blue-600 hover:bg-blue-700 text-white"
           )}
         >
-          {isSelected ? 'Quitar Selección' : 'Seleccionar Equipo'}
+          {isSelected ? 'Deseleccionar Equipo' : 'Seleccionar Equipo'}
         </button>
       </div>
 
