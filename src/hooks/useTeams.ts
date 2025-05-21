@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import type { Team } from '@/types/team';
+import type { Team } from '@/shared/types/team';
 
 export function useTeams(allTeams: Team[]) {
   const [active, setActive] = useState<Team>(allTeams[0]);

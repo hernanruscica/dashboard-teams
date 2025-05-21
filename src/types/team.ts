@@ -12,7 +12,7 @@ export interface Member {
 
 export interface Team {
   id: string;
-  name: string;       // “Equipo 1”, “Equipo 2”, …
+  name: string;       
   members: Member[];
   price: number;
 }

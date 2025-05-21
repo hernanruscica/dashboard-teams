@@ -1,6 +1,6 @@
 // src/components/TeamPanel/TeamPanel.tsx
 import React, { useState } from 'react';
-import type { Team, Member } from '@/types/team';
+import type { Team, Member } from '@/shared/types/team';
 import { teams } from '@/app/data/teams';
 import { MemberCard } from '@/components/TeamPanel/MemberCard';
 //import { PurchaseModal } from '@/components/Modal/PurchaseModal/PurchaseModal';

@@ -3,7 +3,7 @@
 import React from 'react';
 import { Dialog } from '@headlessui/react';
 import { FaComments, FaUsers, FaHandPaper, FaMapMarkerAlt, FaBriefcase } from 'react-icons/fa';
-import type { Member } from '@/types/team';
+import type { Member } from '@/shared/types/team';
 
 interface MemberDetailsModalProps {
   open: boolean;

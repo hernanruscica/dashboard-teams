@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import type { Team } from '@/types/team';
+import type { Team } from '@/shared/types/team';
 
 export function useSelectedTeams() {
   const [selectedTeams, setSelectedTeams] = useState<Set<string>>(new Set());

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { FaComments, FaUsers, FaHandPaper } from 'react-icons/fa';
-import type { Member } from '@/types/team';
+import type { Member } from '@/shared/types/team';
 //import { Insights } from '@/components/Insights/Insights';
 
 interface MemberCardProps {

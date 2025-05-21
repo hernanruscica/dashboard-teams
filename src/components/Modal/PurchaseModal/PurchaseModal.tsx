@@ -4,7 +4,7 @@
 import React, { useState, useEffect } from 'react';
 import { Dialog } from '@headlessui/react';
 import clsx from 'clsx';
-import type { Team } from '@/types/team';
+import type { Team } from '@/shared/types/team';
 
 interface PurchaseModalProps {
   open: boolean;
