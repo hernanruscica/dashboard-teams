@@ -32,7 +32,7 @@ export default function Page() {
      });
   };
 
-  // 3. Manejador para seleccionar equipo activo
+  
   const handleTeamSelect = (id: string) => {
     const team = teams.find(t => t.id === id);
     if (team) setActiveTeam(team);
@@ -45,7 +45,7 @@ export default function Page() {
   console.log('Equipos seleccionados:', getSelectedTeamsData());
 
   return (
-    <main className="min-h-screen p-8 bg-gray-50">
+    <main className="min-h-screen p-0 md:p-4 bg-blue-900">
       {/* 1. Tabs con los equipos */}
       <Tabs
         teams={teams.map(t => ({ id: t.id, name: t.name }))}
@@ -55,7 +55,7 @@ export default function Page() {
 
       {/* 2. Panel del equipo activo */}
       {activeTeam && (
-        <section className="mt-6">
+        <section className="mt-0">
           <TeamPanel 
             team={activeTeam}
             onSelectTeam={handleToggleTeam}
@@ -66,8 +66,8 @@ export default function Page() {
 
       {/* Modificar el panel de equipos seleccionados */}
       {selectedTeams.size > 0 && (
-        <div className="fixed bottom-0 left-0 right-0 bg-white p-4 shadow-lg border-t">
-          <div className="max-w-7xl mx-auto">
+        <div className="fixed bottom-0 left-0 right-0 bg-white p-4 pl-16 shadow-lg border-t">
+          <div className="max-w-7xl mx-auto text-blue-900">
             <h3 className="font-bold mb-2">Equipos seleccionados:</h3>
             <div className="flex flex-wrap gap-2 mb-3">
               {getSelectedTeamsData().map(team => (
@@ -78,9 +78,10 @@ export default function Page() {
             </div>
             <div className="flex justify-between items-center">
               <p className="font-bold">Precio total: ${total}</p>
-              <button className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+              <button className="px-6 py-2 text-white rounded-lg bg-gradient-to-r from-cyan-400 to-fuchsia-600 hover:from-blue-700 hover:to-purple-700 transition">
                 Comprar
               </button>
+
             </div>
           </div>
         </div>

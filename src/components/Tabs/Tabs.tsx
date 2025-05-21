@@ -16,9 +16,9 @@ export function Tabs({ teams, activeId, onSelect }: TabsProps) {
           key={team.id}
           onClick={() => onSelect(team.id)}
           className={clsx(
-            'px-4 py-2 -mb-px font-medium',
+            'px-4 py-2 font-medium rounded-t-lg border-t-2 border-l-2 border-r-2 border-blue-900',
             activeId === team.id
-              ? 'border-b-2 border-blue-500 text-blue-600 bg-blue-100'
+              ? 'text-blue-600 bg-blue-100'
               : 'text-gray-600 hover:text-gray-800 bg-white hover:bg-gray-100'
           )}
         >
