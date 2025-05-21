@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import Image from 'next/image';
 import { Dialog, DialogTitle, DialogPanel } from '@headlessui/react';
 import { FaComments, FaUsers, FaHandPaper, FaMapMarkerAlt, FaBriefcase } from 'react-icons/fa';
 import type { Member } from '@/types/team';
@@ -27,7 +28,7 @@ export function MemberDetailsModal({ open, onClose, member }: MemberDetailsModal
 
           {/* Perfil básico */}
           <div className="flex items-start space-x-6">
-            <img
+            <Image
               src={member.avatarUrl}
               alt={member.name}
               className="w-32 h-32 rounded-lg object-cover"

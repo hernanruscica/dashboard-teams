@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Image from 'next/image';
 import { FaComments, FaUsers, FaHandPaper } from 'react-icons/fa';
 import type { Member } from '@/types/team';
 //import { Insights } from '@/components/Insights/Insights';
@@ -16,7 +17,7 @@ export function MemberCard({ member, onViewInsights }: MemberCardProps) {
       {/* Contenido: nombre+rol, ubicación */}
       <div className="flex">
         {/* Avatar cuadrado */}
-        <img
+        <Image
           src={member.avatarUrl}
           alt={member.name}
           className="w-20 h-20 rounded-lg object-cover flex-shrink-0"
